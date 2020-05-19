@@ -1,0 +1,556 @@
+2020-05-15T14:26:28.910+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-05-15T14:26:28.941+0530 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=1745519 port=27023 dbpath=/home/aaron/projects/mongo/S27023 64-bit host=wormwood
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] db version v4.2.6
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1g  21 Apr 2020
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] modules: none
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] build environment:
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-05-15T14:26:29.031+0530 I  CONTROL  [initandlisten] options: { config: "S27023/m.conf", net: { bindIp: "127.0.0.1", port: 27023 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, replication: { replSetName: "data" }, security: { keyFile: "/home/aaron/projects/mongo/keyfile" }, sharding: { clusterRole: "shardsvr" }, storage: { dbPath: "/home/aaron/projects/mongo/S27023" }, systemLog: { destination: "file", logAppend: true, path: "/home/aaron/projects/mongo/S27023/m.log" } }
+2020-05-15T14:26:29.031+0530 I  STORAGE  [initandlisten] 
+2020-05-15T14:26:29.031+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-05-15T14:26:29.031+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-05-15T14:26:29.031+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7375M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-05-15T14:26:29.978+0530 I  STORAGE  [initandlisten] WiredTiger message [1589532989:978700][1745519:0x7fe4264d7f40], txn-recover: Set global recovery timestamp: (0, 0)
+2020-05-15T14:26:30.336+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-05-15T14:26:30.577+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-05-15T14:26:30.691+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-05-15T14:26:30.691+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-05-15T14:26:30.692+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-05-15T14:26:30.692+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-05-15T14:26:30.692+0530 W  SHARDING [initandlisten] Started with --shardsvr, but no shardIdentity document was found on disk in admin.system.version. This most likely means this server has not yet been added to a sharded cluster.
+2020-05-15T14:26:30.692+0530 I  STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 739a1e62-8749-4cf4-97da-4068db4e5432 and options: { capped: true, size: 10485760 }
+2020-05-15T14:26:30.960+0530 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.startup_log
+2020-05-15T14:26:30.960+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-05-15T14:26:30.961+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/aaron/projects/mongo/S27023/diagnostic.data'
+2020-05-15T14:26:30.963+0530 I  STORAGE  [initandlisten] createCollection: local.replset.oplogTruncateAfterPoint with generated UUID: 1829022d-0b07-4956-b721-f9095d3440a9 and options: {}
+2020-05-15T14:26:31.181+0530 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.replset.oplogTruncateAfterPoint
+2020-05-15T14:26:31.181+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-05-15T14:26:31.181+0530 W  REPL     [ftdc] Rollback ID is not initialized yet.
+2020-05-15T14:26:31.181+0530 I  STORAGE  [initandlisten] createCollection: local.replset.minvalid with generated UUID: d3b3e4e4-94e6-4677-94b3-f4dc2cbcdcba and options: {}
+2020-05-15T14:26:31.518+0530 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.replset.minvalid
+2020-05-15T14:26:31.528+0530 I  SHARDING [initandlisten] Marking collection local.replset.minvalid as collection version: <unsharded>
+2020-05-15T14:26:31.528+0530 I  STORAGE  [initandlisten] createCollection: local.replset.election with generated UUID: 4820ea51-dd4e-426c-869f-ac07b7ad7c4c and options: {}
+2020-05-15T14:26:31.762+0530 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.replset.election
+2020-05-15T14:26:31.762+0530 I  SHARDING [initandlisten] Marking collection local.replset.election as collection version: <unsharded>
+2020-05-15T14:26:31.763+0530 I  REPL     [initandlisten] Did not find local initialized voted for document at startup.
+2020-05-15T14:26:31.763+0530 I  REPL     [initandlisten] Did not find local Rollback ID document at startup. Creating one.
+2020-05-15T14:26:31.763+0530 I  STORAGE  [initandlisten] createCollection: local.system.rollback.id with generated UUID: ce4ad0cb-709e-4308-989c-92741d4cda44 and options: {}
+2020-05-15T14:26:31.981+0530 I  INDEX    [initandlisten] index build: done building index _id_ on ns local.system.rollback.id
+2020-05-15T14:26:31.982+0530 I  SHARDING [initandlisten] Marking collection local.system.rollback.id as collection version: <unsharded>
+2020-05-15T14:26:31.982+0530 I  REPL     [initandlisten] Initialized the rollback ID to 1
+2020-05-15T14:26:31.982+0530 I  REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2020-05-15T14:26:31.986+0530 I  CONTROL  [LogicalSessionCacheRefresh] Sessions collection is not set up; waiting until next sessions refresh interval: sharding state is not yet initialized
+2020-05-15T14:26:31.987+0530 I  CONTROL  [LogicalSessionCacheReap] Sessions collection is not set up; waiting until next sessions reap interval: sharding state is not yet initialized
+2020-05-15T14:26:31.987+0530 I  NETWORK  [listener] Listening on /tmp/mongodb-27023.sock
+2020-05-15T14:26:31.988+0530 I  NETWORK  [listener] Listening on 127.0.0.1
+2020-05-15T14:26:31.988+0530 I  NETWORK  [listener] waiting for connections on port 27023
+2020-05-15T14:28:27.783+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:51922 #1 (1 connection now open)
+2020-05-15T14:28:27.786+0530 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-05-15T14:28:27.786+0530 I  ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+2020-05-15T14:28:27.786+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:51922 conn1: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:28:27.926+0530 I  ACCESS   [conn1] Successfully authenticated as principal __system on local from client 127.0.0.1:51922
+2020-05-15T14:29:01.148+0530 I  CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2020-05-15T14:29:01.149+0530 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-05-15T14:29:01.149+0530 I  NETWORK  [listener] removing socket file: /tmp/mongodb-27023.sock
+2020-05-15T14:29:01.150+0530 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2020-05-15T14:29:01.151+0530 I  REPL     [signalProcessingThread] shutting down replication subsystems
+2020-05-15T14:29:01.151+0530 I  ASIO     [Replication] Killing all outstanding egress activity.
+2020-05-15T14:29:01.151+0530 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2020-05-15T14:29:01.151+0530 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-05-15T14:29:01.156+0530 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2020-05-15T14:29:01.156+0530 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2020-05-15T14:29:01.156+0530 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-05-15T14:29:01.156+0530 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-05-15T14:29:01.156+0530 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-05-15T14:29:01.156+0530 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2020-05-15T14:29:01.230+0530 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2020-05-15T14:29:01.230+0530 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2020-05-15T14:29:01.230+0530 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2020-05-15T14:29:01.555+0530 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-05-15T14:29:01.556+0530 I  CONTROL  [signalProcessingThread] now exiting
+2020-05-15T14:29:01.556+0530 I  CONTROL  [signalProcessingThread] shutting down with code:0
+2020-05-15T14:31:50.915+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-05-15T14:31:50.917+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-05-15T14:31:50.931+0530 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=1776139 port=27023 dbpath=/home/aaron/projects/mongo/S27023 64-bit host=wormwood
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] db version v4.2.6
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1g  21 Apr 2020
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] modules: none
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] build environment:
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-05-15T14:31:51.017+0530 I  CONTROL  [initandlisten] options: { config: "S27023/m.conf", net: { bindIp: "127.0.0.1", port: 27023 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, replication: { replSetName: "data" }, security: { keyFile: "/home/aaron/projects/mongo/keyfile" }, sharding: { clusterRole: "shardsvr" }, storage: { dbPath: "/home/aaron/projects/mongo/S27023" }, systemLog: { destination: "file", logAppend: true, path: "/home/aaron/projects/mongo/S27023/m.log" } }
+2020-05-15T14:31:51.017+0530 I  STORAGE  [initandlisten] Detected data files in /home/aaron/projects/mongo/S27023 created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-05-15T14:31:51.017+0530 I  STORAGE  [initandlisten] 
+2020-05-15T14:31:51.017+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-05-15T14:31:51.017+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-05-15T14:31:51.017+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7375M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-05-15T14:31:51.677+0530 I  STORAGE  [initandlisten] WiredTiger message [1589533311:677121][1776139:0x7f9e58b28f40], txn-recover: Recovering log 1 through 2
+2020-05-15T14:31:51.796+0530 I  STORAGE  [initandlisten] WiredTiger message [1589533311:796431][1776139:0x7f9e58b28f40], txn-recover: Recovering log 2 through 2
+2020-05-15T14:31:51.876+0530 I  STORAGE  [initandlisten] WiredTiger message [1589533311:876830][1776139:0x7f9e58b28f40], txn-recover: Main recovery loop: starting at 1/24064 to 2/256
+2020-05-15T14:31:51.972+0530 I  STORAGE  [initandlisten] WiredTiger message [1589533311:972723][1776139:0x7f9e58b28f40], txn-recover: Recovering log 1 through 2
+2020-05-15T14:31:52.072+0530 I  STORAGE  [initandlisten] WiredTiger message [1589533312:72329][1776139:0x7f9e58b28f40], txn-recover: Recovering log 2 through 2
+2020-05-15T14:31:52.150+0530 I  STORAGE  [initandlisten] WiredTiger message [1589533312:150268][1776139:0x7f9e58b28f40], txn-recover: Set global recovery timestamp: (0, 0)
+2020-05-15T14:31:52.603+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-05-15T14:31:52.657+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-05-15T14:31:52.732+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-05-15T14:31:52.736+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-05-15T14:31:52.736+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-05-15T14:31:52.737+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-05-15T14:31:52.737+0530 W  SHARDING [initandlisten] Started with --shardsvr, but no shardIdentity document was found on disk in admin.system.version. This most likely means this server has not yet been added to a sharded cluster.
+2020-05-15T14:31:52.744+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-05-15T14:31:52.744+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/aaron/projects/mongo/S27023/diagnostic.data'
+2020-05-15T14:31:52.748+0530 I  SHARDING [initandlisten] Marking collection local.replset.minvalid as collection version: <unsharded>
+2020-05-15T14:31:52.748+0530 I  SHARDING [initandlisten] Marking collection local.replset.election as collection version: <unsharded>
+2020-05-15T14:31:52.751+0530 I  REPL     [initandlisten] Did not find local initialized voted for document at startup.
+2020-05-15T14:31:52.755+0530 I  REPL     [initandlisten] Rollback ID is 1
+2020-05-15T14:31:52.755+0530 I  REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2020-05-15T14:31:52.758+0530 I  CONTROL  [LogicalSessionCacheReap] Sessions collection is not set up; waiting until next sessions reap interval: sharding state is not yet initialized
+2020-05-15T14:31:52.759+0530 I  CONTROL  [LogicalSessionCacheRefresh] Sessions collection is not set up; waiting until next sessions refresh interval: sharding state is not yet initialized
+2020-05-15T14:31:52.759+0530 I  NETWORK  [listener] Listening on /tmp/mongodb-27023.sock
+2020-05-15T14:31:52.759+0530 I  NETWORK  [listener] Listening on 127.0.0.1
+2020-05-15T14:31:52.759+0530 I  NETWORK  [listener] waiting for connections on port 27023
+2020-05-15T14:31:52.783+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:52382 #1 (1 connection now open)
+2020-05-15T14:31:52.783+0530 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-05-15T14:31:52.783+0530 I  ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+2020-05-15T14:31:52.784+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:52382 conn1: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:31:52.807+0530 I  ACCESS   [conn1] Successfully authenticated as principal __system on local from client 127.0.0.1:52382
+2020-05-15T14:31:53.001+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-05-15T14:32:08.169+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:52398 #2 (2 connections now open)
+2020-05-15T14:32:08.169+0530 I  NETWORK  [conn2] received client metadata from 127.0.0.1:52398 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:32:08.177+0530 I  ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { getLog: "startupWarnings", lsid: { id: UUID("eb581a88-5e23-4d01-8771-37ff52282a85") }, $db: "admin" }
+2020-05-15T14:32:08.177+0530 I  ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { getFreeMonitoringStatus: 1.0, lsid: { id: UUID("eb581a88-5e23-4d01-8771-37ff52282a85") }, $db: "admin" }
+2020-05-15T14:32:08.179+0530 I  ACCESS   [conn2] Unauthorized: not authorized on admin to execute command { getCmdLineOpts: 1.0, lsid: { id: UUID("eb581a88-5e23-4d01-8771-37ff52282a85") }, $db: "admin" }
+2020-05-15T14:32:59.625+0530 I  CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2020-05-15T14:32:59.626+0530 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-05-15T14:32:59.626+0530 I  NETWORK  [listener] removing socket file: /tmp/mongodb-27023.sock
+2020-05-15T14:32:59.626+0530 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2020-05-15T14:32:59.627+0530 I  REPL     [signalProcessingThread] shutting down replication subsystems
+2020-05-15T14:32:59.627+0530 I  ASIO     [Replication] Killing all outstanding egress activity.
+2020-05-15T14:32:59.627+0530 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2020-05-15T14:32:59.627+0530 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-05-15T14:32:59.635+0530 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2020-05-15T14:32:59.635+0530 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2020-05-15T14:32:59.635+0530 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-05-15T14:32:59.635+0530 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-05-15T14:32:59.635+0530 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-05-15T14:32:59.635+0530 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2020-05-15T14:32:59.690+0530 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2020-05-15T14:32:59.690+0530 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2020-05-15T14:32:59.690+0530 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2020-05-15T14:33:01.044+0530 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-05-15T14:33:01.044+0530 I  CONTROL  [signalProcessingThread] now exiting
+2020-05-15T14:33:01.044+0530 I  CONTROL  [signalProcessingThread] shutting down with code:0
+2020-05-15T14:51:30.713+0530 I  CONTROL  [main] ***** SERVER RESTARTED *****
+2020-05-15T14:51:30.724+0530 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+2020-05-15T14:51:30.746+0530 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] MongoDB starting : pid=1886849 port=27023 dbpath=/home/aaron/projects/mongo/S27023 64-bit host=wormwood
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] db version v4.2.6
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] git version: 20364840b8f1af16917e4c23c1b5f5efd8b352f8
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1g  21 Apr 2020
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] allocator: tcmalloc
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] modules: none
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] build environment:
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten]     distarch: x86_64
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten]     target_arch: x86_64
+2020-05-15T14:51:30.831+0530 I  CONTROL  [initandlisten] options: { config: "S27023/m.conf", net: { bindIp: "127.0.0.1", port: 27023 }, processManagement: { timeZoneInfo: "/usr/share/zoneinfo" }, replication: { replSetName: "data" }, security: { keyFile: "/home/aaron/projects/mongo/keyfile" }, sharding: { clusterRole: "shardsvr" }, storage: { dbPath: "/home/aaron/projects/mongo/S27023" }, systemLog: { destination: "file", logAppend: true, path: "/home/aaron/projects/mongo/S27023/m.log" } }
+2020-05-15T14:51:30.831+0530 I  STORAGE  [initandlisten] Detected data files in /home/aaron/projects/mongo/S27023 created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2020-05-15T14:51:30.831+0530 I  STORAGE  [initandlisten] 
+2020-05-15T14:51:30.831+0530 I  STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2020-05-15T14:51:30.831+0530 I  STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2020-05-15T14:51:30.831+0530 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7375M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+2020-05-15T14:51:31.429+0530 I  STORAGE  [initandlisten] WiredTiger message [1589534491:429289][1886849:0x7f8a67038f40], txn-recover: Recovering log 2 through 3
+2020-05-15T14:51:31.478+0530 I  STORAGE  [initandlisten] WiredTiger message [1589534491:478371][1886849:0x7f8a67038f40], txn-recover: Recovering log 3 through 3
+2020-05-15T14:51:31.541+0530 I  STORAGE  [initandlisten] WiredTiger message [1589534491:541123][1886849:0x7f8a67038f40], txn-recover: Main recovery loop: starting at 2/6272 to 3/256
+2020-05-15T14:51:31.621+0530 I  STORAGE  [initandlisten] WiredTiger message [1589534491:621819][1886849:0x7f8a67038f40], txn-recover: Recovering log 2 through 3
+2020-05-15T14:51:31.714+0530 I  STORAGE  [initandlisten] WiredTiger message [1589534491:714360][1886849:0x7f8a67038f40], txn-recover: Recovering log 3 through 3
+2020-05-15T14:51:31.753+0530 I  STORAGE  [initandlisten] WiredTiger message [1589534491:753739][1886849:0x7f8a67038f40], txn-recover: Set global recovery timestamp: (0, 0)
+2020-05-15T14:51:32.106+0530 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2020-05-15T14:51:32.126+0530 I  STORAGE  [initandlisten] Timestamp monitor starting
+2020-05-15T14:51:32.219+0530 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+2020-05-15T14:51:32.220+0530 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+2020-05-15T14:51:32.220+0530 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+2020-05-15T14:51:32.220+0530 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+2020-05-15T14:51:32.220+0530 W  SHARDING [initandlisten] Started with --shardsvr, but no shardIdentity document was found on disk in admin.system.version. This most likely means this server has not yet been added to a sharded cluster.
+2020-05-15T14:51:32.221+0530 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+2020-05-15T14:51:32.221+0530 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/aaron/projects/mongo/S27023/diagnostic.data'
+2020-05-15T14:51:32.222+0530 I  SHARDING [initandlisten] Marking collection local.replset.minvalid as collection version: <unsharded>
+2020-05-15T14:51:32.222+0530 I  SHARDING [initandlisten] Marking collection local.replset.election as collection version: <unsharded>
+2020-05-15T14:51:32.222+0530 I  REPL     [initandlisten] Did not find local initialized voted for document at startup.
+2020-05-15T14:51:32.223+0530 I  REPL     [initandlisten] Rollback ID is 1
+2020-05-15T14:51:32.223+0530 I  REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2020-05-15T14:51:32.224+0530 I  CONTROL  [LogicalSessionCacheRefresh] Sessions collection is not set up; waiting until next sessions refresh interval: sharding state is not yet initialized
+2020-05-15T14:51:32.224+0530 I  CONTROL  [LogicalSessionCacheReap] Sessions collection is not set up; waiting until next sessions reap interval: sharding state is not yet initialized
+2020-05-15T14:51:32.224+0530 I  NETWORK  [listener] Listening on /tmp/mongodb-27023.sock
+2020-05-15T14:51:32.224+0530 I  NETWORK  [listener] Listening on 127.0.0.1
+2020-05-15T14:51:32.224+0530 I  NETWORK  [listener] waiting for connections on port 27023
+2020-05-15T14:51:32.226+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37648 #1 (1 connection now open)
+2020-05-15T14:51:32.226+0530 I  SHARDING [conn1] Marking collection admin.system.users as collection version: <unsharded>
+2020-05-15T14:51:32.226+0530 I  ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+2020-05-15T14:51:32.226+0530 I  NETWORK  [conn1] received client metadata from 127.0.0.1:37648 conn1: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:32.237+0530 I  ACCESS   [conn1] Successfully authenticated as principal __system on local from client 127.0.0.1:37648
+2020-05-15T14:51:32.299+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37650 #2 (2 connections now open)
+2020-05-15T14:51:32.300+0530 I  NETWORK  [conn2] received client metadata from 127.0.0.1:37650 conn2: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:32.317+0530 I  ACCESS   [conn2] Successfully authenticated as principal __system on local from client 127.0.0.1:37650
+2020-05-15T14:51:32.587+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37652 #3 (3 connections now open)
+2020-05-15T14:51:32.588+0530 I  NETWORK  [conn3] received client metadata from 127.0.0.1:37652 conn3: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:32.644+0530 I  ACCESS   [conn3] Successfully authenticated as principal __system on local from client 127.0.0.1:37652
+2020-05-15T14:51:32.817+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37654 #4 (4 connections now open)
+2020-05-15T14:51:32.818+0530 I  NETWORK  [conn4] received client metadata from 127.0.0.1:37654 conn4: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:32.869+0530 I  ACCESS   [conn4] Successfully authenticated as principal __system on local from client 127.0.0.1:37654
+2020-05-15T14:51:32.943+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37656 #5 (5 connections now open)
+2020-05-15T14:51:32.944+0530 I  NETWORK  [conn5] received client metadata from 127.0.0.1:37656 conn5: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:32.966+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37658 #6 (6 connections now open)
+2020-05-15T14:51:32.968+0530 I  NETWORK  [conn6] received client metadata from 127.0.0.1:37658 conn6: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:33.008+0530 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+2020-05-15T14:51:33.028+0530 I  ACCESS   [conn5] Successfully authenticated as principal __system on local from client 127.0.0.1:37656
+2020-05-15T14:51:33.034+0530 I  ACCESS   [conn6] Successfully authenticated as principal __system on local from client 127.0.0.1:37658
+2020-05-15T14:51:33.175+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37660 #7 (7 connections now open)
+2020-05-15T14:51:33.175+0530 I  NETWORK  [conn7] received client metadata from 127.0.0.1:37660 conn7: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:33.183+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37662 #8 (8 connections now open)
+2020-05-15T14:51:33.183+0530 I  NETWORK  [conn8] received client metadata from 127.0.0.1:37662 conn8: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:33.185+0530 I  ACCESS   [conn7] Successfully authenticated as principal __system on local from client 127.0.0.1:37660
+2020-05-15T14:51:33.193+0530 I  ACCESS   [conn8] Successfully authenticated as principal __system on local from client 127.0.0.1:37662
+2020-05-15T14:51:33.197+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37664 #9 (9 connections now open)
+2020-05-15T14:51:33.197+0530 I  NETWORK  [conn9] received client metadata from 127.0.0.1:37664 conn9: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:33.202+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37666 #10 (10 connections now open)
+2020-05-15T14:51:33.202+0530 I  NETWORK  [conn10] received client metadata from 127.0.0.1:37666 conn10: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:33.210+0530 I  ACCESS   [conn9] Successfully authenticated as principal __system on local from client 127.0.0.1:37664
+2020-05-15T14:51:33.213+0530 I  ACCESS   [conn10] Successfully authenticated as principal __system on local from client 127.0.0.1:37666
+2020-05-15T14:51:33.816+0530 I  CONNPOOL [Replication] Connecting to localhost:27019
+2020-05-15T14:51:33.817+0530 I  CONNPOOL [Replication] Connecting to localhost:27017
+2020-05-15T14:51:34.162+0530 I  STORAGE  [replexec-1] createCollection: local.system.replset with generated UUID: 842f0623-2bab-4ba5-8654-420f9312a72c and options: {}
+2020-05-15T14:51:34.169+0530 I  CONNPOOL [Replication] Connecting to localhost:27018
+2020-05-15T14:51:34.383+0530 I  INDEX    [replexec-1] index build: done building index _id_ on ns local.system.replset
+2020-05-15T14:51:34.384+0530 I  REPL     [replexec-1] New replica set config in use: { _id: "data", version: 3, protocolVersion: 1, writeConcernMajorityJournalDefault: true, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 3, host: "localhost:27023", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: -1, catchUpTakeoverDelayMillis: 30000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('5ebae3224372fb07f5c569e8') } }
+2020-05-15T14:51:34.384+0530 I  REPL     [replexec-1] This node is localhost:27023 in the config
+2020-05-15T14:51:34.384+0530 I  REPL     [replexec-1] transition to STARTUP2 from STARTUP
+2020-05-15T14:51:34.385+0530 I  REPL     [replexec-1] Starting replication storage threads
+2020-05-15T14:51:34.386+0530 I  REPL     [replexec-4] Member localhost:27018 is now in state PRIMARY
+2020-05-15T14:51:34.386+0530 I  REPL     [replexec-0] Member localhost:27017 is now in state SECONDARY
+2020-05-15T14:51:34.387+0530 I  REPL     [replexec-3] Member localhost:27019 is now in state SECONDARY
+2020-05-15T14:51:34.404+0530 I  STORAGE  [replexec-1] createCollection: local.temp_oplog_buffer with generated UUID: 926bb099-33d9-4ecb-9e62-181e50b114fa and options: { temp: true }
+2020-05-15T14:51:34.628+0530 I  INDEX    [replexec-1] index build: done building index _id_ on ns local.temp_oplog_buffer
+2020-05-15T14:51:34.628+0530 I  INITSYNC [replication-0] Starting initial sync (attempt 1 of 10)
+2020-05-15T14:51:34.629+0530 I  STORAGE  [replication-0] Finishing collection drop for local.temp_oplog_buffer (926bb099-33d9-4ecb-9e62-181e50b114fa).
+2020-05-15T14:51:34.648+0530 I  STORAGE  [replication-0] createCollection: local.temp_oplog_buffer with generated UUID: e35a5c0a-18ae-4145-9136-3de4a1d26e32 and options: { temp: true }
+2020-05-15T14:51:34.915+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns local.temp_oplog_buffer
+2020-05-15T14:51:34.916+0530 I  REPL     [replication-0] sync source candidate: localhost:27019
+2020-05-15T14:51:34.916+0530 I  INITSYNC [replication-0] Initial syncer oplog truncation finished in: 0ms
+2020-05-15T14:51:34.916+0530 I  REPL     [replication-0] ******
+2020-05-15T14:51:34.916+0530 I  REPL     [replication-0] creating replication oplog of size: 51200MB...
+2020-05-15T14:51:34.916+0530 I  STORAGE  [replication-0] createCollection: local.oplog.rs with generated UUID: 32bd996d-cc9b-40f5-9e5e-e7e2b1913586 and options: { capped: true, size: 53687091200.0, autoIndexId: false }
+2020-05-15T14:51:35.037+0530 I  STORAGE  [replication-0] Starting OplogTruncaterThread local.oplog.rs
+2020-05-15T14:51:35.038+0530 I  STORAGE  [replication-0] The size storer reports that the oplog contains 0 records totaling to 0 bytes
+2020-05-15T14:51:35.038+0530 I  STORAGE  [replication-0] Scanning the oplog to determine where to place markers for truncation
+2020-05-15T14:51:35.038+0530 I  STORAGE  [replication-0] WiredTiger record store oplog processing took 0ms
+2020-05-15T14:51:35.498+0530 I  REPL     [replication-0] ******
+2020-05-15T14:51:35.498+0530 I  REPL     [replication-0] dropReplicatedDatabases - dropping 1 databases
+2020-05-15T14:51:35.498+0530 I  REPL     [replication-0] dropReplicatedDatabases - dropped 1 databases
+2020-05-15T14:51:35.499+0530 I  CONNPOOL [RS] Connecting to localhost:27019
+2020-05-15T14:51:35.662+0530 I  SHARDING [replication-1] Marking collection local.temp_oplog_buffer as collection version: <unsharded>
+2020-05-15T14:51:35.662+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:admin.system.version
+2020-05-15T14:51:35.721+0530 I  STORAGE  [repl-writer-worker-0] createCollection: admin.system.version with provided UUID: 42b03e22-3d4a-4647-9b7a-e36d4647bd07 and options: { uuid: UUID("42b03e22-3d4a-4647-9b7a-e36d4647bd07") }
+2020-05-15T14:51:35.960+0530 I  INDEX    [repl-writer-worker-0] index build: starting on admin.system.version properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" } using method: Foreground
+2020-05-15T14:51:35.960+0530 I  INDEX    [repl-writer-worker-0] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:36.151+0530 I  COMMAND  [repl-writer-worker-1] setting featureCompatibilityVersion to 4.2
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 10
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 9
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 8
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 7
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 6
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 5
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 4
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 3
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 2
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Skip closing connection for connection # 1
+2020-05-15T14:51:36.151+0530 I  SHARDING [repl-writer-worker-1] initializing sharding state with: { shardName: "data", clusterId: ObjectId('5ebaf5986766efced75fd5c5'), configsvrConnectionString: "config/localhost:27020,localhost:27021,localhost:27022" }
+2020-05-15T14:51:36.151+0530 I  NETWORK  [repl-writer-worker-1] Starting new replica set monitor for config/localhost:27020,localhost:27021,localhost:27022
+2020-05-15T14:51:36.152+0530 I  CONNPOOL [ReplicaSetMonitor-TaskExecutor] Connecting to localhost:27021
+2020-05-15T14:51:36.152+0530 I  CONNPOOL [ReplicaSetMonitor-TaskExecutor] Connecting to localhost:27022
+2020-05-15T14:51:36.152+0530 I  CONNPOOL [ReplicaSetMonitor-TaskExecutor] Connecting to localhost:27020
+2020-05-15T14:51:36.152+0530 I  SHARDING [repl-writer-worker-1] Finished initializing sharding components for secondary node.
+2020-05-15T14:51:36.152+0530 I  INITSYNC [replication-1] CollectionCloner ns:admin.system.version finished cloning with status: OK
+2020-05-15T14:51:36.153+0530 I  INDEX    [replication-1] index build: inserted 4 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:36.157+0530 I  SHARDING [thread11] creating distributed lock ping thread for process wormwood:27023:1589534496:4851055913847749665 (sleeping for 30000ms)
+2020-05-15T14:51:36.221+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns admin.system.version
+2020-05-15T14:51:36.221+0530 I  INITSYNC [replication-1] CollectionCloner::start called, on ns:admin.system.keys
+2020-05-15T14:51:36.221+0530 I  STORAGE  [repl-writer-worker-2] createCollection: admin.system.keys with provided UUID: 9f4427d9-6140-49fd-8b5b-249e03a218a4 and options: { uuid: UUID("9f4427d9-6140-49fd-8b5b-249e03a218a4") }
+2020-05-15T14:51:36.241+0530 I  NETWORK  [ReplicaSetMonitor-TaskExecutor] Confirmed replica set for config is config/localhost:27020,localhost:27021,localhost:27022
+2020-05-15T14:51:36.241+0530 I  SHARDING [Sharding-Fixed-0] Updating config server with confirmed set config/localhost:27020,localhost:27021,localhost:27022
+2020-05-15T14:51:36.313+0530 I  SHARDING [ShardRegistry] Received reply from config server node (unknown) indicating config server optime term has increased, previous optime { ts: Timestamp(0, 0), t: -1 }, now { ts: Timestamp(1589534495, 1), t: 11 }
+2020-05-15T14:51:36.313+0530 I  NETWORK  [shard-registry-reload] Starting new replica set monitor for data/localhost:27017,localhost:27018,localhost:27019,localhost:27023
+2020-05-15T14:51:36.313+0530 I  CONNPOOL [ReplicaSetMonitor-TaskExecutor] Connecting to localhost:27018
+2020-05-15T14:51:36.313+0530 I  CONNPOOL [ReplicaSetMonitor-TaskExecutor] Connecting to localhost:27023
+2020-05-15T14:51:36.313+0530 I  CONNPOOL [ReplicaSetMonitor-TaskExecutor] Connecting to localhost:27017
+2020-05-15T14:51:36.314+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37700 #25 (11 connections now open)
+2020-05-15T14:51:36.390+0530 W  SHARDING [replSetDistLockPinger] pinging failed for distributed lock pinger :: caused by :: LockStateChangeFailed: findAndModify query predicate didn't match any lock document
+2020-05-15T14:51:36.401+0530 I  NETWORK  [ReplicaSetMonitor-TaskExecutor] Confirmed replica set for data is data/localhost:27017,localhost:27018,localhost:27019,localhost:27023
+2020-05-15T14:51:36.401+0530 I  SHARDING [Sharding-Fixed-1] Updating config server with confirmed set data/localhost:27017,localhost:27018,localhost:27019,localhost:27023
+2020-05-15T14:51:36.712+0530 I  INDEX    [repl-writer-worker-2] index build: starting on admin.system.keys properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "admin.system.keys" } using method: Hybrid
+2020-05-15T14:51:36.712+0530 I  INDEX    [repl-writer-worker-2] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:36.936+0530 I  SHARDING [repl-writer-worker-3] Marking collection admin.system.keys as collection version: <unsharded>
+2020-05-15T14:51:36.936+0530 I  INITSYNC [replication-0] CollectionCloner ns:admin.system.keys finished cloning with status: OK
+2020-05-15T14:51:36.937+0530 I  INDEX    [replication-0] index build: inserted 2 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:37.000+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns admin.system.keys
+2020-05-15T14:51:37.080+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:admin.system.users
+2020-05-15T14:51:37.081+0530 I  NETWORK  [conn25] received client metadata from 127.0.0.1:37700 conn25: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:37.081+0530 I  STORAGE  [repl-writer-worker-15] createCollection: admin.system.users with provided UUID: b1e1cacb-7380-4a68-a8e0-8aa03f9f0352 and options: { uuid: UUID("b1e1cacb-7380-4a68-a8e0-8aa03f9f0352") }
+2020-05-15T14:51:37.534+0530 I  INDEX    [repl-writer-worker-15] index build: starting on admin.system.users properties: { v: 2, unique: true, key: { user: 1, db: 1 }, name: "user_1_db_1", ns: "admin.system.users" } using method: Hybrid
+2020-05-15T14:51:37.534+0530 I  INDEX    [repl-writer-worker-15] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:37.890+0530 I  INDEX    [repl-writer-worker-15] index build: starting on admin.system.users properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "admin.system.users" } using method: Hybrid
+2020-05-15T14:51:37.890+0530 I  INDEX    [repl-writer-worker-15] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:38.022+0530 I  INITSYNC [replication-1] CollectionCloner ns:admin.system.users finished cloning with status: OK
+2020-05-15T14:51:38.023+0530 I  INDEX    [replication-1] index build: inserted 3 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:38.125+0530 I  INDEX    [replication-1] index build: done building index user_1_db_1 on ns admin.system.users
+2020-05-15T14:51:38.126+0530 I  INDEX    [replication-1] index build: inserted 3 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:38.273+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns admin.system.users
+2020-05-15T14:51:38.444+0530 I  ACCESS   [conn25] Successfully authenticated as principal __system on local from client 127.0.0.1:37700
+2020-05-15T14:51:38.448+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:callData.call_data
+2020-05-15T14:51:38.451+0530 I  STORAGE  [repl-writer-worker-14] createCollection: callData.call_data with provided UUID: 5489fc4c-b255-4836-84a2-731f38fb21e6 and options: { uuid: UUID("5489fc4c-b255-4836-84a2-731f38fb21e6") }
+2020-05-15T14:51:38.832+0530 I  INDEX    [repl-writer-worker-14] index build: starting on callData.call_data properties: { v: 2, key: { source_location: 1.0, destination_location: 1.0 }, name: "source_location_1_destination_location_1", ns: "callData.call_data" } using method: Hybrid
+2020-05-15T14:51:38.832+0530 I  INDEX    [repl-writer-worker-14] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:39.232+0530 I  INDEX    [repl-writer-worker-14] index build: starting on callData.call_data properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "callData.call_data" } using method: Hybrid
+2020-05-15T14:51:39.232+0530 I  INDEX    [repl-writer-worker-14] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:39.385+0530 I  INITSYNC [replication-1] CollectionCloner ns:callData.call_data finished cloning with status: OK
+2020-05-15T14:51:39.387+0530 I  INDEX    [replication-1] index build: inserted 1498 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:39.451+0530 I  INDEX    [replication-1] index build: done building index source_location_1_destination_location_1 on ns callData.call_data
+2020-05-15T14:51:39.458+0530 I  INDEX    [replication-1] index build: inserted 1498 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:39.509+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns callData.call_data
+2020-05-15T14:51:39.597+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:config.cache.collections
+2020-05-15T14:51:39.600+0530 I  STORAGE  [repl-writer-worker-7] createCollection: config.cache.collections with provided UUID: 3a52491c-23a7-48dc-9e12-c70f9f74d8f5 and options: { uuid: UUID("3a52491c-23a7-48dc-9e12-c70f9f74d8f5") }
+2020-05-15T14:51:40.479+0530 I  INDEX    [repl-writer-worker-7] index build: starting on config.cache.collections properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.cache.collections" } using method: Hybrid
+2020-05-15T14:51:40.479+0530 I  INDEX    [repl-writer-worker-7] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:40.637+0530 I  INITSYNC [replication-1] CollectionCloner ns:config.cache.collections finished cloning with status: OK
+2020-05-15T14:51:40.638+0530 I  INDEX    [replication-1] index build: inserted 2 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:40.689+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns config.cache.collections
+2020-05-15T14:51:40.716+0530 I  INITSYNC [replication-1] CollectionCloner::start called, on ns:config.cache.chunks.test.test_collection
+2020-05-15T14:51:40.719+0530 I  STORAGE  [repl-writer-worker-8] createCollection: config.cache.chunks.test.test_collection with provided UUID: a3f45434-1eff-4ee8-b871-0e3771f1cb5e and options: { uuid: UUID("a3f45434-1eff-4ee8-b871-0e3771f1cb5e") }
+2020-05-15T14:51:41.182+0530 I  INDEX    [repl-writer-worker-8] index build: starting on config.cache.chunks.test.test_collection properties: { v: 2, key: { lastmod: 1 }, name: "lastmod_1", ns: "config.cache.chunks.test.test_collection" } using method: Hybrid
+2020-05-15T14:51:41.182+0530 I  INDEX    [repl-writer-worker-8] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:41.627+0530 I  INDEX    [repl-writer-worker-8] index build: starting on config.cache.chunks.test.test_collection properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.cache.chunks.test.test_collection" } using method: Hybrid
+2020-05-15T14:51:41.627+0530 I  INDEX    [repl-writer-worker-8] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:41.802+0530 I  INITSYNC [replication-1] CollectionCloner ns:config.cache.chunks.test.test_collection finished cloning with status: OK
+2020-05-15T14:51:41.806+0530 I  INDEX    [replication-1] index build: inserted 3 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:41.859+0530 I  INDEX    [replication-1] index build: done building index lastmod_1 on ns config.cache.chunks.test.test_collection
+2020-05-15T14:51:41.864+0530 I  INDEX    [replication-1] index build: inserted 3 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:41.904+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns config.cache.chunks.test.test_collection
+2020-05-15T14:51:41.992+0530 I  INITSYNC [replication-1] CollectionCloner::start called, on ns:config.transactions
+2020-05-15T14:51:41.996+0530 I  STORAGE  [repl-writer-worker-11] createCollection: config.transactions with provided UUID: b6f893e3-82c2-4dd5-acd9-c7cda57b828e and options: { uuid: UUID("b6f893e3-82c2-4dd5-acd9-c7cda57b828e") }
+2020-05-15T14:51:42.529+0530 I  INDEX    [repl-writer-worker-11] index build: starting on config.transactions properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.transactions" } using method: Hybrid
+2020-05-15T14:51:42.529+0530 I  INDEX    [repl-writer-worker-11] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:42.655+0530 I  INITSYNC [replication-0] CollectionCloner ns:config.transactions finished cloning with status: OK
+2020-05-15T14:51:42.656+0530 I  INDEX    [replication-0] index build: inserted 0 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:42.727+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns config.transactions
+2020-05-15T14:51:42.757+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:config.cache.chunks.config.system.sessions
+2020-05-15T14:51:42.760+0530 I  STORAGE  [repl-writer-worker-13] createCollection: config.cache.chunks.config.system.sessions with provided UUID: bac7c1ff-e6bd-4f30-8d6b-46b6fb8f309d and options: { uuid: UUID("bac7c1ff-e6bd-4f30-8d6b-46b6fb8f309d") }
+2020-05-15T14:51:43.446+0530 I  INDEX    [repl-writer-worker-13] index build: starting on config.cache.chunks.config.system.sessions properties: { v: 2, key: { lastmod: 1 }, name: "lastmod_1", ns: "config.cache.chunks.config.system.sessions" } using method: Hybrid
+2020-05-15T14:51:43.447+0530 I  INDEX    [repl-writer-worker-13] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:43.912+0530 I  INDEX    [repl-writer-worker-13] index build: starting on config.cache.chunks.config.system.sessions properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.cache.chunks.config.system.sessions" } using method: Hybrid
+2020-05-15T14:51:43.913+0530 I  INDEX    [repl-writer-worker-13] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:44.082+0530 I  INITSYNC [replication-1] CollectionCloner ns:config.cache.chunks.config.system.sessions finished cloning with status: OK
+2020-05-15T14:51:44.082+0530 I  INDEX    [replication-1] index build: inserted 1 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:44.152+0530 I  INDEX    [replication-1] index build: done building index lastmod_1 on ns config.cache.chunks.config.system.sessions
+2020-05-15T14:51:44.154+0530 I  INDEX    [replication-1] index build: inserted 1 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:44.222+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns config.cache.chunks.config.system.sessions
+2020-05-15T14:51:44.300+0530 I  INITSYNC [replication-1] CollectionCloner::start called, on ns:config.system.sessions
+2020-05-15T14:51:44.302+0530 I  STORAGE  [repl-writer-worker-0] createCollection: config.system.sessions with provided UUID: d26ee540-4776-4d5d-87c0-3f197dcafa35 and options: { uuid: UUID("d26ee540-4776-4d5d-87c0-3f197dcafa35") }
+2020-05-15T14:51:44.691+0530 I  INDEX    [repl-writer-worker-0] index build: starting on config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", expireAfterSeconds: 1800, ns: "config.system.sessions" } using method: Hybrid
+2020-05-15T14:51:44.691+0530 I  INDEX    [repl-writer-worker-0] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:44.813+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37732 #37 (12 connections now open)
+2020-05-15T14:51:44.813+0530 I  NETWORK  [conn37] received client metadata from 127.0.0.1:37732 conn37: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:51:44.932+0530 I  COMMAND  [conn37] command admin.system.users appName: "MongoDB Shell" command: isMaster { isMaster: 1, saslSupportedMechs: "admin.root", hostInfo: "wormwood:27017", client: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }, $db: "admin" } numYields:0 queryHash:0A298B98 planCacheKey:C2D1BA7E reslen:750 locks:{ ReplicationStateTransition: { acquireCount: { w: 2 } }, Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 2 } }, Mutex: { acquireCount: { r: 2 } } } storage:{ data: { bytesRead: 139, timeReadingMicros: 20 }, timeWaitingMicros: { schemaLock: 109644 } } protocol:op_query 119ms
+2020-05-15T14:51:45.044+0530 I  INDEX    [repl-writer-worker-0] index build: starting on config.system.sessions properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.system.sessions" } using method: Hybrid
+2020-05-15T14:51:45.044+0530 I  INDEX    [repl-writer-worker-0] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:45.070+0530 I  ACCESS   [conn37] Successfully authenticated as principal root on admin from client 127.0.0.1:37732
+2020-05-15T14:51:45.164+0530 I  INITSYNC [replication-0] CollectionCloner ns:config.system.sessions finished cloning with status: OK
+2020-05-15T14:51:45.165+0530 I  INDEX    [replication-0] index build: inserted 4 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:45.234+0530 I  INDEX    [replication-0] index build: done building index lsidTTLIndex on ns config.system.sessions
+2020-05-15T14:51:45.235+0530 I  INDEX    [replication-0] index build: inserted 4 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:45.301+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns config.system.sessions
+2020-05-15T14:51:45.387+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:config.cache.databases
+2020-05-15T14:51:45.390+0530 I  STORAGE  [repl-writer-worker-2] createCollection: config.cache.databases with provided UUID: ea7a9fd9-a8b7-4f87-baa0-43498921b0f7 and options: { uuid: UUID("ea7a9fd9-a8b7-4f87-baa0-43498921b0f7") }
+2020-05-15T14:51:45.854+0530 I  INDEX    [repl-writer-worker-2] index build: starting on config.cache.databases properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "config.cache.databases" } using method: Hybrid
+2020-05-15T14:51:45.854+0530 I  INDEX    [repl-writer-worker-2] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:46.012+0530 I  INITSYNC [replication-1] CollectionCloner ns:config.cache.databases finished cloning with status: OK
+2020-05-15T14:51:46.012+0530 I  INDEX    [replication-1] index build: inserted 3 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:46.174+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns config.cache.databases
+2020-05-15T14:51:46.308+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:test.posts
+2020-05-15T14:51:46.308+0530 I  STORAGE  [repl-writer-worker-15] createCollection: test.posts with provided UUID: 0d71ec85-39b0-4fe6-8788-6a1ff60ff021 and options: { uuid: UUID("0d71ec85-39b0-4fe6-8788-6a1ff60ff021") }
+2020-05-15T14:51:47.010+0530 I  INDEX    [repl-writer-worker-15] index build: starting on test.posts properties: { v: 2, unique: true, key: { author: 1.0 }, name: "author_1", ns: "test.posts" } using method: Hybrid
+2020-05-15T14:51:47.011+0530 I  INDEX    [repl-writer-worker-15] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:47.420+0530 I  INDEX    [repl-writer-worker-15] index build: starting on test.posts properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "test.posts" } using method: Hybrid
+2020-05-15T14:51:47.420+0530 I  INDEX    [repl-writer-worker-15] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:47.585+0530 I  INITSYNC [replication-0] CollectionCloner ns:test.posts finished cloning with status: OK
+2020-05-15T14:51:47.586+0530 I  INDEX    [replication-0] index build: inserted 1 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:47.630+0530 I  INDEX    [replication-0] index build: done building index author_1 on ns test.posts
+2020-05-15T14:51:47.631+0530 I  INDEX    [replication-0] index build: inserted 1 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:47.686+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns test.posts
+2020-05-15T14:51:47.761+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:test.webserverlog
+2020-05-15T14:51:47.763+0530 I  STORAGE  [repl-writer-worker-14] createCollection: test.webserverlog with provided UUID: 5448480e-e6bc-4d55-983e-225bf10a2b1c and options: { uuid: UUID("5448480e-e6bc-4d55-983e-225bf10a2b1c"), capped: true, size: 5242880, max: 5000 }
+2020-05-15T14:51:48.039+0530 I  INDEX    [repl-writer-worker-14] index build: done building index _id_ on ns test.webserverlog
+2020-05-15T14:51:48.187+0530 I  INDEX    [repl-writer-worker-14] index build: done building index createdAt_1 on ns test.webserverlog
+2020-05-15T14:51:48.271+0530 I  INITSYNC [replication-1] CollectionCloner ns:test.webserverlog finished cloning with status: OK
+2020-05-15T14:51:48.271+0530 I  INITSYNC [replication-1] CollectionCloner::start called, on ns:test.fs.files
+2020-05-15T14:51:48.272+0530 I  STORAGE  [repl-writer-worker-12] createCollection: test.fs.files with provided UUID: 7a90c9f9-fe69-46df-a7e1-94f924374ce7 and options: { uuid: UUID("7a90c9f9-fe69-46df-a7e1-94f924374ce7") }
+2020-05-15T14:51:48.780+0530 I  INDEX    [repl-writer-worker-12] index build: starting on test.fs.files properties: { v: 2, key: { filename: 1, uploadDate: 1 }, name: "filename_1_uploadDate_1", ns: "test.fs.files" } using method: Hybrid
+2020-05-15T14:51:48.780+0530 I  INDEX    [repl-writer-worker-12] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:49.179+0530 I  INDEX    [repl-writer-worker-12] index build: starting on test.fs.files properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "test.fs.files" } using method: Hybrid
+2020-05-15T14:51:49.179+0530 I  INDEX    [repl-writer-worker-12] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:49.289+0530 I  INITSYNC [replication-0] CollectionCloner ns:test.fs.files finished cloning with status: OK
+2020-05-15T14:51:49.290+0530 I  INDEX    [replication-0] index build: inserted 4 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:49.357+0530 I  INDEX    [replication-0] index build: done building index filename_1_uploadDate_1 on ns test.fs.files
+2020-05-15T14:51:49.359+0530 I  INDEX    [replication-0] index build: inserted 4 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:49.446+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns test.fs.files
+2020-05-15T14:51:49.535+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:test.people
+2020-05-15T14:51:49.537+0530 I  STORAGE  [repl-writer-worker-7] createCollection: test.people with provided UUID: 870aeeca-1ed2-4c17-bc14-5b9077829885 and options: { uuid: UUID("870aeeca-1ed2-4c17-bc14-5b9077829885") }
+2020-05-15T14:51:50.048+0530 I  INDEX    [repl-writer-worker-7] index build: starting on test.people properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "test.people" } using method: Hybrid
+2020-05-15T14:51:50.049+0530 I  INDEX    [repl-writer-worker-7] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:50.253+0530 I  INITSYNC [replication-1] CollectionCloner ns:test.people finished cloning with status: OK
+2020-05-15T14:51:50.255+0530 I  INDEX    [replication-1] index build: inserted 1 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:50.303+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns test.people
+2020-05-15T14:51:50.335+0530 I  INITSYNC [replication-1] CollectionCloner::start called, on ns:test.inventory
+2020-05-15T14:51:50.338+0530 I  STORAGE  [repl-writer-worker-8] createCollection: test.inventory with provided UUID: 9d043e0b-63ec-4a2d-85b0-f19945ca2038 and options: { uuid: UUID("9d043e0b-63ec-4a2d-85b0-f19945ca2038") }
+2020-05-15T14:51:50.846+0530 I  INDEX    [repl-writer-worker-8] index build: starting on test.inventory properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "test.inventory" } using method: Hybrid
+2020-05-15T14:51:50.846+0530 I  INDEX    [repl-writer-worker-8] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:51.025+0530 I  INITSYNC [replication-0] CollectionCloner ns:test.inventory finished cloning with status: OK
+2020-05-15T14:51:51.026+0530 I  INDEX    [replication-0] index build: inserted 1 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:51.084+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns test.inventory
+2020-05-15T14:51:51.123+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:test.fs.chunks
+2020-05-15T14:51:51.124+0530 I  STORAGE  [repl-writer-worker-11] createCollection: test.fs.chunks with provided UUID: ccb331c8-82b1-4e3d-b4ef-61b152b592a3 and options: { uuid: UUID("ccb331c8-82b1-4e3d-b4ef-61b152b592a3") }
+2020-05-15T14:51:51.632+0530 I  INDEX    [repl-writer-worker-11] index build: starting on test.fs.chunks properties: { v: 2, unique: true, key: { files_id: 1, n: 1 }, name: "files_id_1_n_1", ns: "test.fs.chunks" } using method: Hybrid
+2020-05-15T14:51:51.634+0530 I  INDEX    [repl-writer-worker-11] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:51.987+0530 I  INDEX    [repl-writer-worker-11] index build: starting on test.fs.chunks properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "test.fs.chunks" } using method: Hybrid
+2020-05-15T14:51:51.988+0530 I  INDEX    [repl-writer-worker-11] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:52.497+0530 I  INITSYNC [replication-0] CollectionCloner ns:test.fs.chunks finished cloning with status: OK
+2020-05-15T14:51:52.498+0530 I  INDEX    [replication-0] index build: inserted 54 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:52.586+0530 I  INDEX    [replication-0] index build: done building index files_id_1_n_1 on ns test.fs.chunks
+2020-05-15T14:51:52.589+0530 I  INDEX    [replication-0] index build: inserted 54 keys from external sorter into index in 0 seconds
+2020-05-15T14:51:52.642+0530 I  INDEX    [replication-0] index build: done building index _id_ on ns test.fs.chunks
+2020-05-15T14:51:52.742+0530 I  INITSYNC [replication-0] CollectionCloner::start called, on ns:test.test_collection
+2020-05-15T14:51:52.745+0530 I  STORAGE  [repl-writer-worker-6] createCollection: test.test_collection with provided UUID: d1435d34-d260-4e35-bbfb-6acc4c7fce50 and options: { uuid: UUID("d1435d34-d260-4e35-bbfb-6acc4c7fce50") }
+2020-05-15T14:51:53.230+0530 I  INDEX    [repl-writer-worker-6] index build: starting on test.test_collection properties: { v: 2, key: { number: 1.0 }, name: "number_1", ns: "test.test_collection" } using method: Hybrid
+2020-05-15T14:51:53.230+0530 I  INDEX    [repl-writer-worker-6] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:53.632+0530 I  INDEX    [repl-writer-worker-6] index build: starting on test.test_collection properties: { v: 2, key: { _id: 1 }, name: "_id_", ns: "test.test_collection" } using method: Hybrid
+2020-05-15T14:51:53.632+0530 I  INDEX    [repl-writer-worker-6] build may temporarily use up to 200 megabytes of RAM
+2020-05-15T14:51:56.506+0530 I  COMMAND  [conn37] command admin.$cmd appName: "MongoDB Shell" command: replSetGetStatus { replSetGetStatus: 1.0, forShell: 1.0, $db: "admin" } numYields:0 reslen:5881 locks:{} protocol:op_msg 1378ms
+2020-05-15T14:51:59.155+0530 I  INITSYNC [replication-1] CollectionCloner ns:test.test_collection finished cloning with status: OK
+2020-05-15T14:52:01.523+0530 I  INDEX    [replication-1] index build: inserted 1000000 keys from external sorter into index in 2 seconds
+2020-05-15T14:52:01.653+0530 I  INDEX    [replication-1] index build: done building index number_1 on ns test.test_collection
+2020-05-15T14:52:02.959+0530 I  INDEX    [replication-1] index build: inserted 1000000 keys from external sorter into index in 1 seconds
+2020-05-15T14:52:03.163+0530 I  INDEX    [replication-1] index build: done building index _id_ on ns test.test_collection
+2020-05-15T14:52:03.427+0530 I  INITSYNC [replication-1] Finished cloning data: OK. Beginning oplog replay.
+2020-05-15T14:52:03.427+0530 I  INITSYNC [replication-0] Writing to the oplog and applying operations until { : Timestamp(1589534516, 1) } before initial sync can complete. (started fetching at { : Timestamp(1589534488, 1) } and applying at { : Timestamp(1589534488, 1) })
+2020-05-15T14:52:03.428+0530 I  SHARDING [replication-0] Marking collection local.replset.oplogTruncateAfterPoint as collection version: <unsharded>
+2020-05-15T14:52:03.430+0530 I  SHARDING [replication-0] Marking collection local.system.rollback.id as collection version: <unsharded>
+2020-05-15T14:52:03.431+0530 I  INITSYNC [replication-1] Finished fetching oplog during initial sync: CallbackCanceled: error in fetcher batch callback: oplog fetcher is shutting down. Last fetched optime: { ts: Timestamp(1589534516, 1), t: 16 }
+2020-05-15T14:52:03.431+0530 I  INITSYNC [replication-1] Initial sync attempt finishing up.
+2020-05-15T14:52:03.431+0530 I  INITSYNC [replication-1] Initial Sync Attempt Statistics: { failedInitialSyncAttempts: 0, maxFailedInitialSyncAttempts: 10, initialSyncStart: new Date(1589534494628), initialSyncAttempts: [], fetchedMissingDocs: 0, appliedOps: 4, initialSyncOplogStart: Timestamp(1589534488, 1), initialSyncOplogEnd: Timestamp(1589534516, 1), databases: { databasesCloned: 4, admin: { collections: 3, clonedCollections: 3, start: new Date(1589534495662), end: new Date(1589534498448), elapsedMillis: 2786, admin.system.version: { documentsToCopy: 4, documentsCopied: 4, indexes: 1, fetchedBatches: 1, start: new Date(1589534495663), end: new Date(1589534496221), elapsedMillis: 558, receivedBatches: 1 }, admin.system.keys: { documentsToCopy: 2, documentsCopied: 2, indexes: 1, fetchedBatches: 1, start: new Date(1589534496221), end: new Date(1589534497080), elapsedMillis: 859, receivedBatches: 1 }, admin.system.users: { documentsToCopy: 3, documentsCopied: 3, indexes: 2, fetchedBatches: 1, start: new Date(1589534497080), end: new Date(1589534498448), elapsedMillis: 1368, receivedBatches: 1 } }, callData: { collections: 1, clonedCollections: 1, start: new Date(1589534498447), end: new Date(1589534499596), elapsedMillis: 1149, callData.call_data: { documentsToCopy: 1498, documentsCopied: 1498, indexes: 2, fetchedBatches: 2, start: new Date(1589534498449), end: new Date(1589534499596), elapsedMillis: 1147, receivedBatches: 2 } }, config: { collections: 6, clonedCollections: 6, start: new Date(1589534499596), end: new Date(1589534506307), elapsedMillis: 6711, config.cache.collections: { documentsToCopy: 2, documentsCopied: 2, indexes: 1, fetchedBatches: 1, start: new Date(1589534499598), end: new Date(1589534500717), elapsedMillis: 1119, receivedBatches: 1 }, config.cache.chunks.test.test_collection: { documentsToCopy: 3, documentsCopied: 3, indexes: 2, fetchedBatches: 1, start: new Date(1589534500717), end: new Date(1589534501994), elapsedMillis: 1277, receivedBatches: 1 }, config.transactions: { documentsToCopy: 0, documentsCopied: 0, indexes: 1, fetchedBatches: 0, start: new Date(1589534501992), end: new Date(1589534502758), elapsedMillis: 766, receivedBatches: 0 }, config.cache.chunks.config.system.sessions: { documentsToCopy: 1, documentsCopied: 1, indexes: 2, fetchedBatches: 1, start: new Date(1589534502758), end: new Date(1589534504300), elapsedMillis: 1542, receivedBatches: 1 }, config.system.sessions: { documentsToCopy: 4, documentsCopied: 4, indexes: 2, fetchedBatches: 1, start: new Date(1589534504300), end: new Date(1589534505387), elapsedMillis: 1087, receivedBatches: 1 }, config.cache.databases: { documentsToCopy: 3, documentsCopied: 3, indexes: 1, fetchedBatches: 1, start: new Date(1589534505387), end: new Date(1589534506307), elapsedMillis: 920, receivedBatches: 1 } }, test: { collections: 7, clonedCollections: 7, start: new Date(1589534506307), end: new Date(1589534523427), elapsedMillis: 17120, test.posts: { documentsToCopy: 1, documentsCopied: 1, indexes: 2, fetchedBatches: 1, start: new Date(1589534506308), end: new Date(1589534507761), elapsedMillis: 1453, receivedBatches: 1 }, test.webserverlog: { documentsToCopy: 0, documentsCopied: 0, indexes: 2, fetchedBatches: 0, start: new Date(1589534507761), end: new Date(1589534508271), elapsedMillis: 510, receivedBatches: 0 }, test.fs.files: { documentsToCopy: 4, documentsCopied: 4, indexes: 2, fetchedBatches: 1, start: new Date(1589534508271), end: new Date(1589534509535), elapsedMillis: 1264, receivedBatches: 1 }, test.people: { documentsToCopy: 1, documentsCopied: 1, indexes: 1, fetchedBatches: 1, start: new Date(1589534509535), end: new Date(1589534510336), elapsedMillis: 801, receivedBatches: 1 }, test.inventory: { documentsToCopy: 1, documentsCopied: 1, indexes: 1, fetchedBatches: 1, start: new Date(1589534510335), end: new Date(1589534511123), elapsedMillis: 788, receivedBatches: 1 }, test.fs.chunks: { documentsToCopy: 54, documentsCopied: 54, indexes: 2, fetchedBatches: 1, start: new Date(1589534511123), end: new Date(1589534512742), elapsedMillis: 1619, receivedBatches: 1 }, test.test_collection: { documentsToCopy: 1000000, documentsCopied: 1000000, indexes: 2, fetchedBatches: 6, start: new Date(1589534512742), end: new Date(1589534523427), elapsedMillis: 10685, receivedBatches: 6 } } } }
+2020-05-15T14:52:03.431+0530 I  CONNPOOL [RS] Ending connection to host localhost:27019 due to bad connection status: CallbackCanceled: Callback was canceled; 1 connections to that host remain open
+2020-05-15T14:52:03.431+0530 I  STORAGE  [replication-1] Finishing collection drop for local.temp_oplog_buffer (e35a5c0a-18ae-4145-9136-3de4a1d26e32).
+2020-05-15T14:52:03.447+0530 I  SHARDING [replication-1] Marking collection config.transactions as collection version: <unsharded>
+2020-05-15T14:52:03.447+0530 I  INITSYNC [replication-1] initial sync done; took 28s.
+2020-05-15T14:52:03.447+0530 I  REPL     [replication-1] transition to RECOVERING from STARTUP2
+2020-05-15T14:52:03.447+0530 I  REPL     [replication-1] Starting replication fetcher thread
+2020-05-15T14:52:03.447+0530 I  REPL     [replication-1] Starting replication applier thread
+2020-05-15T14:52:03.447+0530 I  REPL     [replication-1] Starting replication reporter thread
+2020-05-15T14:52:03.447+0530 I  REPL     [rsSync-0] Starting oplog application
+2020-05-15T14:52:03.447+0530 I  REPL     [rsBackgroundSync] could not find member to sync from
+2020-05-15T14:52:03.448+0530 I  STORAGE  [replexec-4] Triggering the first stable checkpoint. Initial Data: Timestamp(1589534516, 1) PrevStable: Timestamp(0, 0) CurrStable: Timestamp(1589534516, 1)
+2020-05-15T14:52:03.448+0530 I  REPL     [rsSync-0] transition to SECONDARY from RECOVERING
+2020-05-15T14:52:03.448+0530 I  REPL     [rsSync-0] Resetting sync source to empty, which was :27017
+2020-05-15T14:52:06.313+0530 I  CONNPOOL [ShardRegistry] Connecting to localhost:27021
+2020-05-15T14:52:09.450+0530 I  REPL     [rsBackgroundSync] sync source candidate: localhost:27019
+2020-05-15T14:52:09.452+0530 I  REPL     [rsBackgroundSync] Changed sync source from empty to localhost:27019
+2020-05-15T14:52:09.453+0530 I  CONNPOOL [RS] Connecting to localhost:27019
+2020-05-15T14:52:11.046+0530 I  NETWORK  [conn37] end connection 127.0.0.1:37732 (11 connections now open)
+2020-05-15T14:52:17.885+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37782 #49 (12 connections now open)
+2020-05-15T14:52:17.886+0530 I  NETWORK  [conn49] received client metadata from 127.0.0.1:37782 conn49: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:52:17.910+0530 I  ACCESS   [conn49] Successfully authenticated as principal root on admin from client 127.0.0.1:37782
+2020-05-15T14:53:38.378+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:37860 #50 (13 connections now open)
+2020-05-15T14:53:38.379+0530 I  NETWORK  [conn50] received client metadata from 127.0.0.1:37860 conn50: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:53:38.546+0530 I  ACCESS   [conn50] Successfully authenticated as principal __system on local from client 127.0.0.1:37860
+2020-05-15T14:56:18.133+0530 I  NETWORK  [conn49] end connection 127.0.0.1:37782 (12 connections now open)
+2020-05-15T14:56:32.225+0530 I  CONNPOOL [ShardRegistry] Connecting to localhost:27018
+2020-05-15T14:56:32.278+0530 I  SH_REFR  [ShardServerCatalogCacheLoader-0] Refresh for database config from version {} to version { uuid: UUID("b4e98d6a-c7a2-4fc3-a3e9-027e63f65bc2"), lastMod: 0 } took 54 ms
+2020-05-15T14:56:32.284+0530 I  SH_REFR  [ShardServerCatalogCacheLoader-0] Refresh for collection config.system.sessions to version 1|0||5ebaf690c11d164e3e1831b6 took 5 ms
+2020-05-15T14:56:33.284+0530 I  CONNPOOL [TaskExecutorPool-0] Connecting to localhost:27019
+2020-05-15T14:56:33.284+0530 I  CONNPOOL [TaskExecutorPool-0] Connecting to localhost:27017
+2020-05-15T14:56:33.284+0530 I  CONNPOOL [TaskExecutorPool-0] Connecting to localhost:27023
+2020-05-15T14:56:33.284+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:38008 #54 (13 connections now open)
+2020-05-15T14:56:33.284+0530 I  NETWORK  [conn54] received client metadata from 127.0.0.1:38008 conn54: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T14:56:33.389+0530 I  ACCESS   [conn54] Successfully authenticated as principal __system on local from client 127.0.0.1:38008
+2020-05-15T14:58:38.553+0530 I  NETWORK  [conn50] end connection 127.0.0.1:37860 (12 connections now open)
+2020-05-15T15:01:32.314+0530 I  CONNPOOL [TaskExecutorPool-0] Dropping all pooled connections to localhost:27017 due to ShutdownInProgress: Pool for localhost:27017 has expired.
+2020-05-15T15:01:32.314+0530 I  CONNPOOL [TaskExecutorPool-0] Dropping all pooled connections to localhost:27018 due to ShutdownInProgress: Pool for localhost:27018 has expired.
+2020-05-15T15:01:32.314+0530 I  CONNPOOL [TaskExecutorPool-0] Dropping all pooled connections to localhost:27019 due to ShutdownInProgress: Pool for localhost:27019 has expired.
+2020-05-15T15:01:32.314+0530 I  CONNPOOL [TaskExecutorPool-0] Dropping all pooled connections to localhost:27023 due to ShutdownInProgress: Pool for localhost:27023 has expired.
+2020-05-15T15:01:33.395+0530 I  NETWORK  [conn54] end connection 127.0.0.1:38008 (11 connections now open)
+2020-05-15T15:06:32.225+0530 I  CONNPOOL [ShardRegistry] Dropping all pooled connections to localhost:27018 due to ShutdownInProgress: Pool for localhost:27018 has expired.
+2020-05-15T15:06:32.225+0530 I  CONNPOOL [ShardRegistry] Connecting to localhost:27018
+2020-05-15T15:06:51.647+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:38606 #58 (12 connections now open)
+2020-05-15T15:06:51.649+0530 I  NETWORK  [conn58] received client metadata from 127.0.0.1:38606 conn58: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T15:06:51.703+0530 I  ACCESS   [conn58] Successfully authenticated as principal __system on local from client 127.0.0.1:38606
+2020-05-15T15:11:51.707+0530 I  NETWORK  [conn58] end connection 127.0.0.1:38606 (11 connections now open)
+2020-05-15T15:13:36.417+0530 I  CONNPOOL [ShardRegistry] Dropping all pooled connections to localhost:27021 due to ShutdownInProgress: Pool for localhost:27021 has expired.
+2020-05-15T15:14:36.431+0530 I  CONNPOOL [ShardRegistry] Connecting to localhost:27021
+2020-05-15T15:16:51.646+0530 I  NETWORK  [listener] connection accepted from 127.0.0.1:39298 #60 (12 connections now open)
+2020-05-15T15:16:51.647+0530 I  NETWORK  [conn60] received client metadata from 127.0.0.1:39298 conn60: { driver: { name: "NetworkInterfaceTL", version: "4.2.6" }, os: { type: "Linux", name: "Arch", architecture: "x86_64", version: "rolling" } }
+2020-05-15T15:16:51.697+0530 I  ACCESS   [conn60] Successfully authenticated as principal __system on local from client 127.0.0.1:39298
+2020-05-15T15:21:51.700+0530 I  NETWORK  [conn60] end connection 127.0.0.1:39298 (11 connections now open)
+2020-05-15T15:38:24.040+0530 I  CONTROL  [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+2020-05-15T15:38:24.041+0530 I  NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2020-05-15T15:38:24.041+0530 I  NETWORK  [listener] removing socket file: /tmp/mongodb-27023.sock
+2020-05-15T15:38:24.042+0530 I  -        [signalProcessingThread] Stopping further Flow Control ticket acquisitions.
+2020-05-15T15:38:24.042+0530 I  REPL     [signalProcessingThread] shutting down replication subsystems
+2020-05-15T15:38:24.043+0530 I  REPL     [signalProcessingThread] Stopping replication reporter thread
+2020-05-15T15:38:24.043+0530 I  REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27019: CallbackCanceled: Reporter no longer valid
+2020-05-15T15:38:24.043+0530 I  REPL     [signalProcessingThread] Stopping replication fetcher thread
+2020-05-15T15:38:24.043+0530 I  REPL     [signalProcessingThread] Stopping replication applier thread
+2020-05-15T15:38:24.043+0530 I  REPL     [rsBackgroundSync] Replication producer stopped after oplog fetcher finished returning a batch from our sync source.  Abandoning this batch of oplog entries and re-evaluating our sync source.
+2020-05-15T15:38:24.044+0530 I  REPL     [rsBackgroundSync] Stopping replication producer
+2020-05-15T15:38:24.044+0530 I  CONNPOOL [RS] Ending connection to host localhost:27019 due to bad connection status: CallbackCanceled: Callback was canceled; 1 connections to that host remain open
+2020-05-15T15:38:24.192+0530 I  REPL     [rsSync-0] Finished oplog application
+2020-05-15T15:38:24.192+0530 I  REPL     [signalProcessingThread] Stopping replication storage threads
+2020-05-15T15:38:24.193+0530 I  ASIO     [RS] Killing all outstanding egress activity.
+2020-05-15T15:38:24.193+0530 I  ASIO     [RS] Killing all outstanding egress activity.
+2020-05-15T15:38:24.193+0530 I  CONNPOOL [RS] Dropping all pooled connections to localhost:27019 due to ShutdownInProgress: Shutting down the connection pool
+2020-05-15T15:38:24.194+0530 I  ASIO     [Replication] Killing all outstanding egress activity.
+2020-05-15T15:38:24.194+0530 I  CONNPOOL [Replication] Dropping all pooled connections to localhost:27018 due to ShutdownInProgress: Shutting down the connection pool
+2020-05-15T15:38:24.194+0530 I  CONNPOOL [Replication] Dropping all pooled connections to localhost:27017 due to ShutdownInProgress: Shutting down the connection pool
+2020-05-15T15:38:24.195+0530 I  ASIO     [ShardRegistry] Killing all outstanding egress activity.
+2020-05-15T15:38:24.195+0530 I  CONNPOOL [ShardRegistry] Dropping all pooled connections to localhost:27020 due to ShutdownInProgress: Shutting down the connection pool
+2020-05-15T15:38:24.195+0530 I  CONNPOOL [ShardRegistry] Dropping all pooled connections to localhost:27022 due to ShutdownInProgress: Shutting down the connection pool
+2020-05-15T15:38:24.195+0530 I  CONNPOOL [ShardRegistry] Dropping all pooled connections to localhost:27021 due to ShutdownInProgress: Shutting down the connection pool
+2020-05-15T15:38:24.195+0530 I  ASIO     [TaskExecutorPool-0] Killing all outstanding egress activity.
+2020-05-15T15:38:24.196+0530 W  SHARDING [signalProcessingThread] error encountered while cleaning up distributed ping entry for wormwood:27023:1589534496:4851055913847749665 :: caused by :: ShutdownInProgress: Shutdown in progress
+2020-05-15T15:38:24.196+0530 W  SHARDING [shard-registry-reload] cant reload ShardRegistry  :: caused by :: CallbackCanceled: Callback canceled
+2020-05-15T15:38:24.196+0530 I  ASIO     [shard-registry-reload] Killing all outstanding egress activity.
+2020-05-15T15:38:24.196+0530 I  ASIO     [ReplicaSetMonitor-TaskExecutor] Killing all outstanding egress activity.
+2020-05-15T15:38:24.196+0530 I  CONNPOOL [ReplicaSetMonitor-TaskExecutor] Dropping all pooled connections to localhost:27023 due to ShutdownInProgress: Shutting down the connection pool
+2020-05-15T15:38:24.196+0530 I  NETWORK  [conn25] end connection 127.0.0.1:37700 (10 connections now open)
+2020-05-15T15:38:24.212+0530 I  STORAGE  [TimestampMonitor] Timestamp monitor is stopping due to: interrupted at shutdown
+2020-05-15T15:38:24.223+0530 I  CONTROL  [signalProcessingThread] Shutting down free monitoring
+2020-05-15T15:38:24.223+0530 I  FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2020-05-15T15:38:24.226+0530 I  STORAGE  [signalProcessingThread] Deregistering all the collections
+2020-05-15T15:38:24.226+0530 I  STORAGE  [WTOplogJournalThread] Oplog journal thread loop shutting down
+2020-05-15T15:38:24.226+0530 I  STORAGE  [signalProcessingThread] Timestamp monitor shutting down
+2020-05-15T15:38:24.227+0530 I  STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2020-05-15T15:38:24.284+0530 I  STORAGE  [signalProcessingThread] Shutting down session sweeper thread
+2020-05-15T15:38:24.284+0530 I  STORAGE  [signalProcessingThread] Finished shutting down session sweeper thread
+2020-05-15T15:38:24.284+0530 I  STORAGE  [signalProcessingThread] Shutting down journal flusher thread
+2020-05-15T15:38:24.292+0530 I  STORAGE  [signalProcessingThread] Finished shutting down journal flusher thread
+2020-05-15T15:38:24.292+0530 I  STORAGE  [signalProcessingThread] Shutting down checkpoint thread
+2020-05-15T15:38:24.292+0530 I  STORAGE  [signalProcessingThread] Finished shutting down checkpoint thread
+2020-05-15T15:38:24.562+0530 I  STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2020-05-15T15:38:24.562+0530 I  CONTROL  [signalProcessingThread] now exiting
+2020-05-15T15:38:24.563+0530 I  CONTROL  [signalProcessingThread] shutting down with code:0
