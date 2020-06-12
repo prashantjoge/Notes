@@ -37,4 +37,5 @@ cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
 ssh wormwood
 ssh m2
 
-
+to copy files from one machine to another
+scp file.name hduser@m2:/destination/directory/file.name

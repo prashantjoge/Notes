@@ -43,6 +43,7 @@ custom help: cheat eg. cheat nmcli
 video editor : openshot
 screen recorder : obs
 rdp : xfreerdp /u:verbat /p:H3llo6%%9 /w:1600 /h:1050 /v:182.72.164.238
+xfreerdp /u:Administrator /p:Think@2020 /w:1600 /h:1050 /v:182.73.218.152
 Windows Network Drive: sudo mount.cifs //192.168.1.222/Temp_Share ~/Desktop/winShare
 # antivirus (https://wiki.archlinux.org/index.php/ClamAV): clamscan myfile  or --recursive --infected /home
 # Wipe filesystem : sudo wipefs -a /dev/sdxx
@@ -65,9 +66,14 @@ Remove duplicate files: rmlint /home/alu
 find largest directories : ncdu
 
 Password manager: gopass
-
+nn
 VBOX start Headless
 VBoxManage list vms
 vboxmanage list runningvms
-VBoxManage startvm ubuntu-server --type headless
+VBoxManage startvm m1 --type headless
 VBoxManage controlvm m1 poweroff
+
+#Access Control list
+getfacl foldername
+setfacl -m u:username:rwx /folder/name
+
