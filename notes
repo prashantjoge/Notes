@@ -44,7 +44,7 @@ video editor : openshot
 screen recorder : obs
 rdp : xfreerdp /u:verbat /p:H3llo6%%9 /w:1600 /h:1050 /v:182.72.164.238
 xfreerdp /u:Administrator /p:Think@2020 /w:1600 /h:1050 /v:182.73.218.152
-Windows Network Drive: sudo mount.cifs //192.168.1.222/Temp_Share ~/Desktop/winShare
+WVBOX start Headlessindows Network Drive: sudo mount.cifs //192.168.1.222/Temp_Share ~/Desktop/winShare
 # antivirus (https://wiki.archlinux.org/index.php/ClamAV): clamscan myfile  or --recursive --infected /home
 # Wipe filesystem : sudo wipefs -a /dev/sdxx
 # fdisk /dev/sdb
@@ -67,7 +67,7 @@ find largest directories : ncdu
 
 Password manager: gopass
 nn
-VBOX start Headless
+VBox start Headless
 VBoxManage list vms
 vboxmanage list runningvms
 VBoxManage startvm m1 --type headless
@@ -113,3 +113,8 @@ sudo journalctl -b --no-pager
 sudo journalctl -u polkit
 # check harddisk speed
 hdparm -tT /dev/sda
+
+#Start KVM
+#Enable libvirtd service
+sudo systemctl start libvirtd
+# then start virtual machine manager using drun or virt-manager
